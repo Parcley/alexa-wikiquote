@@ -1,0 +1,26 @@
+{
+  "name": "skill-alexa-nodejs-quote",
+  "version": "1.0.0",
+  "description": "An unofficial wikiquote skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "quote",
+    "wikiquote"
+  ],
+  "author": "Martin Perzl",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.15"
+  },
+  "devDependencies": {
+    "@types/alexa-sdk": "^1.0.10",
+    "typescript": "^2.5.3"
+  }
+}
