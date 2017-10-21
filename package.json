@@ -6,8 +6,9 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "zip": "bestzip bundle.zip lib/* node_modules",
-    "deploy": "npm run build && npm run zip"
+    "zip": "bestzip quote-skill.zip lib/* node_modules",
+    "upload": "s3-cli --config ./aws.config --region eu-west-1 put quote-skill.zip s3://perzl-alexa/quote-skill.zip",
+    "deploy": "npm run build && npm run zip && npm run upload"
   },
   "keywords": [
     "alexa",
@@ -22,8 +23,8 @@
   },
   "devDependencies": {
     "@types/alexa-sdk": "^1.0.10",
-    "aws-sdk": "^2.138.0",
     "bestzip": "^1.1.4",
+    "s3-cli": "^0.13.0",
     "typescript": "^2.5.3"
   }
 }
