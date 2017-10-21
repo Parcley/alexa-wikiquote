@@ -1,4 +1,5 @@
 import * as Alexa from "alexa-sdk";
+import {Wikiquote} from "./wikiquote";
 
 const handlers: Alexa.Handlers<Alexa.Request> = {
     'LaunchRequest': function() {
@@ -10,7 +11,11 @@ const handlers: Alexa.Handlers<Alexa.Request> = {
     },
     'SayHello': function() {
         console.log("in SayHello");
-        this.emit(':tell', 'Hallo Wiki Zitate!');
+        Wikiquote.getRandomTitle().subscribe(
+            (data: string) => {
+                this.emit(':tell', 'Hallo Wiki Zitate!');
+            }
+        );
     }
 };
 

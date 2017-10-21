@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
+    "test": "jasmine",
     "zip": "bestzip quote-skill.zip lib/* node_modules",
     "upload": "s3-cli --config ./aws.config --region eu-west-1 put quote-skill.zip s3://perzl-alexa/quote-skill.zip",
     "deploy": "npm run build && npm run zip && npm run upload"
@@ -19,11 +20,15 @@
   "author": "Martin Perzl",
   "license": "Apache-2.0",
   "dependencies": {
-    "alexa-sdk": "^1.0.15"
+    "@akanass/rx-http-request": "^2.6.0",
+    "alexa-sdk": "^1.0.15",
+    "rxjs": "^5.5.0"
   },
   "devDependencies": {
     "@types/alexa-sdk": "^1.0.10",
+    "@types/jasmine": "^2.6.0",
     "bestzip": "^1.1.4",
+    "jasmine": "^2.8.0",
     "s3-cli": "^0.13.0",
     "typescript": "^2.5.3"
   }
