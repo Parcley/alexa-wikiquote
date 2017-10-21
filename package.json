@@ -4,9 +4,10 @@
   "description": "An unofficial wikiquote skill",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "zip": "bestzip bundle.zip lib/* node_modules",
+    "deploy": "npm run build && npm run zip"
   },
   "keywords": [
     "alexa",
@@ -21,6 +22,8 @@
   },
   "devDependencies": {
     "@types/alexa-sdk": "^1.0.10",
+    "aws-sdk": "^2.138.0",
+    "bestzip": "^1.1.4",
     "typescript": "^2.5.3"
   }
 }
