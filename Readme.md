@@ -11,8 +11,8 @@ a skill reading quotes from de.wikiquote.org
   npm install
   ```
   - open Visual Studio Code
-  - build with Ctrl+Shift+B
-  - create aws.config file with access key and secret key (you should not commit that file)
+  - build with Ctrl+Shift+B (or npm run build)
+  - create aws.config file with your S3 bucket's access key and secret key (you should not commit that file)
   - npm run deploy
 
 
